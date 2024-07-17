@@ -6,6 +6,7 @@ import Landing from './pages/Landing/Landing'
 import SneakerList from './pages/SneakerList/SneakerList'
 import NewSneaker from './pages/NewSneaker/NewSneaker'
 import SneakerPage from './pages/SneakerPage/SneakerPage'
+import EditSneaker from './pages/EditSneaker/EditSneaker'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -23,6 +24,7 @@ function App() {
         <Route path='/sneakers' element={<SneakerList/>} />
         <Route path="/sneakers/new" element={<NewSneaker/>} />
         <Route path='/sneakers/:sneakerId' element={<SneakerPage />} />
+        <Route path='/sneakers/:sneakerId/update' element={<EditSneaker />} />
       </Routes>
     </>
   )

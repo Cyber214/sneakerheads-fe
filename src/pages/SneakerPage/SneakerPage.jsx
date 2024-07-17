@@ -41,6 +41,7 @@ const SneakerPage = () => {
         <p>Loading Sneaker Details...</p>
       )}
       <NavLink to='/sneakers'><button id="back-btn">Back</button></NavLink>
+      <NavLink to={`/sneakers/${sneakerId}/update`}><button id="edit-btn">Edit</button></NavLink>
     </div>
   )
 }

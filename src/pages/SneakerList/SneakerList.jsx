@@ -1,6 +1,6 @@
 // npm modules
-import { useState, useEffect } from 'react';
-import sneakerService from '../../services/sneakerService';
+import { useState, useEffect } from 'react'
+import sneakerService from '../../services/sneakerService'
 import { NavLink } from "react-router-dom"
 
 //css

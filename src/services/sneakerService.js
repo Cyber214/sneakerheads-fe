@@ -1,4 +1,4 @@
-const apiUrl = 'http://3.140.246.223:8000'
+const apiUrl = 'http://localhost:8000'
 
 const getSneakers = async () => {
   try {
@@ -33,6 +33,25 @@ const createSneaker = async (sneaker) => {
 const getSneakerDetail = async (sneakerId) => {
   try {
     const res = await fetch(`${apiUrl}/sneakers/${sneakerId}/`)
+    if (!res.ok) {
+      throw new Error('Error getting a sneaker')
+    }
+    return await res.json()
+  } catch (error) {
+    console.error('Error fetching sneaker detail:', error)
+    throw error
+  }
+}
+
+export const updateSneaker = async (sneakerId, sneaker) => {
+  try {
+    const res = await fetch(`${apiUrl}/sneakers/${sneakerId}/update/`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(sneaker),
+    })
     if (!res.ok) {
       throw new Error('Error getting a sneaker')
     }
