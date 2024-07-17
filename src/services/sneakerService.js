@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8000'
+const apiUrl = 'http://3.140.246.223:8000'
 
 const getSneakers = async () => {
   try {
@@ -24,7 +24,7 @@ const createSneaker = async (sneaker) => {
     if (!res.ok) {
       throw new Error('Error adding sneaker')
     }
-    return await res.json();
+    return await res.json()
   } catch (error) {
     throw new Error(`Error adding sneaker: ${error.message}`)
   }

@@ -1,27 +1,27 @@
 // src/pages/SneakerDetail/SneakerDetail.jsx
 
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import sneakerService from '../../services/sneakerService';
-import './SneakerPage.css';
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import sneakerService from '../../services/sneakerService'
+import './SneakerPage.css'
 import { NavLink } from "react-router-dom"
 
 const SneakerPage = () => {
-  const { sneakerId } = useParams();
-  const [sneaker, setSneaker] = useState(null);
+  const { sneakerId } = useParams()
+  const [sneaker, setSneaker] = useState(null)
 
   useEffect(() => {
     const fetchDetails = async () => {
-      const data = await sneakerService.getSneakerDetail(sneakerId);
-      setSneaker(data);
-    };
+      const data = await sneakerService.getSneakerDetail(sneakerId)
+      setSneaker(data)
+    }
 
-    fetchDetails();
-  }, [sneakerId]);
+    fetchDetails()
+  }, [sneakerId])
 
   const formatDate = (timestamp) => {
-    return timestamp.slice(0, 10); // Extracts 'YYYY-MM-DD'
-  };
+    return timestamp.slice(0, 10) // Extracts 'YYYY-MM-DD'
+  }
 
   return (
     <div className="SneakerPage">
@@ -42,7 +42,7 @@ const SneakerPage = () => {
       )}
       <NavLink to='/sneakers'><button id="back-btn">Back</button></NavLink>
     </div>
-  );
-};
+  )
+}
 
-export default SneakerPage;
+export default SneakerPage
