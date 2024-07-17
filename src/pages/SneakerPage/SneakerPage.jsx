@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import sneakerService from '../../services/sneakerService'
+import { useNavigate } from 'react-router-dom'
 import './SneakerPage.css'
 import { NavLink } from "react-router-dom"
 
@@ -21,6 +22,13 @@ const SneakerPage = () => {
 
   const formatDate = (timestamp) => {
     return timestamp.slice(0, 10) // Extracts 'YYYY-MM-DD'
+  }
+
+  const navigate = useNavigate()
+
+  const handleDelete = () => {
+    sneakerService.deleteSneaker(sneakerId)
+    navigate(`/sneakers`)
   }
 
   return (
@@ -42,6 +50,7 @@ const SneakerPage = () => {
       )}
       <NavLink to='/sneakers'><button id="back-btn">Back</button></NavLink>
       <NavLink to={`/sneakers/${sneakerId}/update`}><button id="edit-btn">Edit</button></NavLink>
+      <button id="delete-btn" onClick={handleDelete}>Delete</button>
     </div>
   )
 }

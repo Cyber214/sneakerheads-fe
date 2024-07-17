@@ -38,7 +38,7 @@ const getSneakerDetail = async (sneakerId) => {
     }
     return await res.json()
   } catch (error) {
-    console.error('Error fetching sneaker detail:', error)
+    console.error('Error fetching sneaker details:', error)
     throw error
   }
 }
@@ -57,7 +57,26 @@ export const updateSneaker = async (sneakerId, sneaker) => {
     }
     return await res.json()
   } catch (error) {
-    console.error('Error fetching sneaker detail:', error)
+    console.error('Error updating sneaker detail:', error)
+    throw error
+  }
+}
+
+export const deleteSneaker = async (sneakerId, sneaker) => {
+  try {
+    const res = await fetch(`${apiUrl}/sneakers/${sneakerId}/delete/`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(sneaker),
+    })
+    if (!res.ok) {
+      throw new Error('Error getting a sneaker')
+    }
+    return await res.json()
+  } catch (error) {
+    console.error('Error deleting sneaker:', error)
     throw error
   }
 }
@@ -66,4 +85,5 @@ export default {
   getSneakers,
   createSneaker,
   getSneakerDetail,
+  deleteSneaker,
 }
