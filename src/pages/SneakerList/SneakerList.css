@@ -1,0 +1,59 @@
+/* src/pages/SneakersList/SneakerList.css */
+
+#header {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #f0f0f0;
+}
+
+.SneakerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px;
+}
+
+.SneakerCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  text-align: center;
+  border: 2px solid #f0f0f0;
+}
+
+.SneakerCard:hover {
+  transform: translateY(-5px);
+  border-color: #ffd700; /* Gold border on hover */
+  box-shadow: 0 4px 8px #ffea00c7;
+}
+
+/* Targeting only anchor tags inside .SneakerCard */
+.SneakerCard a {
+  text-decoration: none; /* Remove underline */
+}
+
+.SneakerCard h3 {
+  background: #48338e; /* Gold background */
+  color: #fff;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+
+.SneakerCard h4 {
+  background: #19d85e; /* Orange background */
+  color: #000600;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1em;
+}
+
+.SneakerCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
