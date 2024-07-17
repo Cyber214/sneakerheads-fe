@@ -12,6 +12,25 @@ const getSneakers = async () => {
   }
 }
 
+const createSneaker = async (sneaker) => {
+  try {
+    const res = await fetch(`${apiUrl}/sneakers/new/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(sneaker),
+    })
+    if (!res.ok) {
+      throw new Error('Error adding sneaker')
+    }
+    return await res.json();
+  } catch (error) {
+    throw new Error(`Error adding sneaker: ${error.message}`)
+  }
+}
+
 export default {
-  getSneakers
+  getSneakers,
+  createSneaker,
 }
