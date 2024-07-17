@@ -1,0 +1,40 @@
+/* src/pages/SneakerDetail/SneakerDetail.css */
+
+.SneakerPage {
+  background-color: #1f1f1f; /* Dark background color */
+  color: #f0f0f0; /* Light text color */
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.SneakerHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.SneakerHeader h1 {
+  font-size: 2.5em;
+  color: #806cc1; /* Gold color */
+}
+
+.SneakerHeader h2 {
+  font-size: 1.8em;
+  color: #806cc1; /* Gold color */
+}
+
+.SneakerInfo {
+  margin-bottom: 20px;
+}
+
+.SneakerInfo p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.SneakerInfo strong {
+  color: #19d85e; /* Orange color */
+}

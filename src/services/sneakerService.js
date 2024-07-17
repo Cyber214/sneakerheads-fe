@@ -30,7 +30,21 @@ const createSneaker = async (sneaker) => {
   }
 }
 
+const getSneakerDetail = async (sneakerId) => {
+  try {
+    const res = await fetch(`${apiUrl}/sneakers/${sneakerId}/`)
+    if (!res.ok) {
+      throw new Error('Error getting a sneaker')
+    }
+    return await res.json()
+  } catch (error) {
+    console.error('Error fetching sneaker detail:', error)
+    throw error
+  }
+}
+
 export default {
   getSneakers,
   createSneaker,
+  getSneakerDetail,
 }
