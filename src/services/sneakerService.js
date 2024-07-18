@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8000'
+const apiUrl = 'http://3.144.198.57:8000'
 
 const getSneakers = async () => {
   try {
@@ -62,18 +62,11 @@ export const updateSneaker = async (sneakerId, sneaker) => {
   }
 }
 
-export const deleteSneaker = async (sneakerId, sneaker) => {
+export const deleteSneaker = async (sneakerId) => {
   try {
     const res = await fetch(`${apiUrl}/sneakers/${sneakerId}/delete/`, {
       method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(sneaker),
     })
-    if (!res.ok) {
-      throw new Error('Error getting a sneaker')
-    }
     return await res.json()
   } catch (error) {
     console.error('Error deleting sneaker:', error)
