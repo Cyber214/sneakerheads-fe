@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import sneakerService from '../../services/sneakerService'
+import './NewSneaker.css'  // Make sure you create this CSS file for styling
 
 const NewSneaker = () => {
   const [formData, setFormData] = useState({
@@ -42,12 +43,13 @@ const NewSneaker = () => {
   }
 
   return (
-    <div>
-      <h1>New Sneaker</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Brand:</label>
+    <div className="form-container">
+      <h1 className="form-title">New Sneaker</h1>
+      <form className="sneaker-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="brand">Brand:</label>
           <input
+            id="brand"
             type="text"
             name="brand"
             value={formData.brand}
@@ -55,9 +57,10 @@ const NewSneaker = () => {
             required
           />
         </div>
-        <div>
-          <label>Model:</label>
+        <div className="form-group">
+          <label htmlFor="model">Model:</label>
           <input
+            id="model"
             type="text"
             name="model"
             value={formData.model}
@@ -65,9 +68,10 @@ const NewSneaker = () => {
             required
           />
         </div>
-        <div>
-          <label>Size:</label>
+        <div className="form-group">
+          <label htmlFor="size">Size:</label>
           <input
+            id="size"
             type="text"
             name="size"
             value={formData.size}
@@ -75,9 +79,10 @@ const NewSneaker = () => {
             required
           />
         </div>
-        <div>
-          <label>Colorway:</label>
+        <div className="form-group">
+          <label htmlFor="colorway">Colorway:</label>
           <input
+            id="colorway"
             type="text"
             name="colorway"
             value={formData.colorway}
@@ -85,8 +90,8 @@ const NewSneaker = () => {
             required
           />
         </div>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Create Sneaker</button>
+        {error && <div className="error-message">{error}</div>}
+        <button type="submit" className="submit-button">Create Sneaker</button>
       </form>
     </div>
   )

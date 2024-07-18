@@ -5,8 +5,8 @@
   color: #f0f0f0; /* Light text color */
   padding: 20px;
   margin: 0 auto;
-  margin-top: 50px;
-  width: 70%;
+  margin-top: 90px;
+  width: 50%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -27,7 +27,8 @@
 }
 
 .SneakerInfo {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .SneakerInfo p {
@@ -37,4 +38,41 @@
 
 .SneakerInfo strong {
   color: #19d85e; /* Orange color */
+}
+
+button {
+  background-color: #1DB954; /* Spotify Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Spacing between buttons */
+  margin-bottom: 40px;
+}
+
+button:hover {
+  background-color: #1ED760; /* Lighter Green */
+}
+
+#delete-btn {
+  background-color: #E64A19; /* Dark Red */
+}
+
+#delete-btn:hover {
+  background-color: #BF360C; /* Darker Red */
+}
+
+#back-btn, #edit-btn {
+  background-color: #1DB954; /* Spotify Green */
+}
+
+#back-btn:hover, #edit-btn:hover {
+  background-color: #1ED760; /* Lighter Green */
+}
+
+#back-btn {
+  margin-left: 20vh; /* Dark Red */
 }

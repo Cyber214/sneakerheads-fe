@@ -1,0 +1,94 @@
+nav {
+  background-color: #c9c3c3; /* Spotify Green */
+  color: #a21f22;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav div {
+  display: flex;
+  gap: 40px; /* Increased gap for spacing */
+}
+
+nav .nav-title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav .nav-link {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav a {
+  color: #FFFFFF; /* White text color for links */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded buttons */
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+
+nav .nav-link a {
+  color: inherit; /* Inherit color for links inside nav-link */
+}
+
+nav > div {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 90px;
+}
+
+nav a:hover {
+  background-color: #81181a; /* Lighter Green */
+  color: white;
+}
+
+nav a.active {
+  background-color: #81181a; /* Darker background for active state */
+  color: white;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav div {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; /* Reduced gap for smaller screens */
+    margin-top: 10px; /* Add some spacing above */
+  }
+
+  nav .nav-title {
+    font-size: 1.2rem; /* Slightly smaller font size for h2 elements */
+  }
+
+  nav .nav-link {
+    font-size: 1.2rem; /* Consistent font size for all links */
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+
+  nav .nav-title {
+    font-size: 1rem; /* Further reduce font size for very small screens */
+  }
+
+  nav .nav-link a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

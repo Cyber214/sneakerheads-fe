@@ -1,0 +1,57 @@
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 90px;
+}
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1DB954; /* Spotify Green */
+}
+
+.sneaker-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background-color: #1DB954; /* Spotify Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #1ED760; /* Lighter Green */
+}
