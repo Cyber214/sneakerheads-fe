@@ -2,7 +2,7 @@
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #c9c3c3b4;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 90px;
@@ -11,7 +11,7 @@
 .form-title {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #1DB954; /* Spotify Green */
+  color: #81181a;
 }
 
 .sneaker-form {
@@ -42,7 +42,7 @@
 }
 
 .submit-button {
-  background-color: #1DB954; /* Spotify Green */
+  background-color: #81181a;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -50,8 +50,9 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
 .submit-button:hover {
-  background-color: #1ED760; /* Lighter Green */
+  background-color: #81181a;
 }

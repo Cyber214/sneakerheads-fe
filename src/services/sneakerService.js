@@ -67,12 +67,31 @@ export const deleteSneaker = async (sneakerId) => {
     const res = await fetch(`${apiUrl}/sneakers/${sneakerId}/delete/`, {
       method: 'DELETE',
     })
-    return await res.json()
+
+    if (res.ok) { // Check if response status is OK
+      // Handle empty responses (e.g., HTTP 204 No Content)
+      if (res.status === 204) {
+        return null // No content, successful deletion
+      }
+      
+      // Try to parse JSON only if the response has a JSON content type
+      const contentType = res.headers.get('Content-Type')
+      if (contentType && contentType.includes('application/json')) {
+        return await res.json() // Parse and return JSON data
+      }
+
+      // If it's not JSON, just return the text response
+      const text = await res.text()
+      return text
+    } else {
+      throw new Error(`Server error: ${res.status} ${res.statusText}`)
+    }
   } catch (error) {
     console.error('Error deleting sneaker:', error)
     throw error
   }
 }
+
 
 export default {
   getSneakers,
