@@ -16,19 +16,19 @@
 }
 
 .SneakerCard {
-  background: #fff;
+  background: #f5f5f5; /* Beige background */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 250px;
   text-align: center;
-  border: 2px solid #f0f0f0;
+  border: 2px solid #d9534f; /* Red border */
 }
 
 .SneakerCard:hover {
   transform: translateY(-5px);
-  border-color: #ffd700; /* Gold border on hover */
-  box-shadow: 0 4px 8px #ffea00c7;
+  border-color: #c9302c; /* Darker red border on hover */
+  box-shadow: 0 4px 8px rgba(217, 83, 79, 0.5); /* Red shadow on hover */
 }
 
 /* Targeting only anchor tags inside .SneakerCard */
@@ -37,7 +37,7 @@
 }
 
 .SneakerCard h3 {
-  background: #48338e; /* Gold background */
+  background: #d9534f; /* Red background */
   color: #fff;
   margin: 0;
   padding: 10px 0;
@@ -45,8 +45,8 @@
 }
 
 .SneakerCard h4 {
-  background: #19d85e; /* Orange background */
-  color: #000600;
+  background: #f5f5f5; /* Beige background */
+  color: #d9534f; /* Red text */
   margin: 0;
   padding: 10px 0;
   font-size: 1em;

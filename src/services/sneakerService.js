@@ -1,4 +1,4 @@
-const apiUrl = 'http://3.23.128.176:8000'
+const apiUrl = 'http://3.141.34.115:80'
 
 const getSneakers = async () => {
   try {
